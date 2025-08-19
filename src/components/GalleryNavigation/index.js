@@ -20,9 +20,7 @@ const GalleryNavigation = ({galleries}) => {
     </li>
 ))}
 </ul>
-
         </nav>
-
     )
 }
 
