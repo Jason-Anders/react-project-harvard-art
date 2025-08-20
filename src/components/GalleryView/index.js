@@ -1,13 +1,13 @@
 import { useParams, Route } from "react-router-dom";
 import ArtImageTile from '../ArtImageTile';
-// import ArtDescription from "../ArtDescription";
+import ArtDescription from "../ArtDescription";
 
 const GalleryView = ({galleries}) => {
 
 const { galleryId } = useParams();
 const existingGallery = galleries.find(gallery=>gallery.id===parseInt(galleryId))
 console.log(existingGallery);
-
+// console.log(artId)
 // const picArray = existingGallery.objects.map((object)=>{
 //     return object.images[0]
 // });
@@ -24,9 +24,9 @@ console.log(existingGallery);
                     )
                 })}
             </Route>
-            {/* <Route exact path={`galleries/${galleryId}/art/`}>
-                <ArtDescription gallery={existingGallery}/>
-            </Route> */}
+            <Route exact path={`/galleries/${galleryId}/art/:artId`}>
+                <ArtDescription gallery={existingGallery} />
+            </Route>
         </div>
     )
 // }
