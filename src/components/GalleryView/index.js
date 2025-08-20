@@ -1,5 +1,6 @@
 import { useParams, Route } from "react-router-dom";
 import ArtImageTile from '../ArtImageTile';
+// import ArtDescription from "../ArtDescription";
 
 const GalleryView = ({galleries}) => {
 
@@ -16,15 +17,16 @@ console.log(existingGallery);
             <h1>Hello from GalleryView</h1>
             <h2>{existingGallery.name}</h2>
                 {/* <ArtImageTile art={picArray} gallery={existingGallery}/> */}
-            <Route exact to={`/galleries/${galleryId}`}>
-
-            {existingGallery.objects.map(object=>{
-                 return (
-                     <ArtImageTile key={object.id} art={[object.images[0]]} gallery={existingGallery}/>
-                )
-             })}
- {/* <ArtImageTile art={picArray} gallery={existingGallery}/> */}
+            <Route exact path={`/galleries/${galleryId}`}>
+                {existingGallery.objects.map(object=>{
+                    return (
+                        <ArtImageTile key={object.id} art={[object.images[0]]} gallery={existingGallery}/>
+                    )
+                })}
             </Route>
+            {/* <Route exact path={`galleries/${galleryId}/art/`}>
+                <ArtDescription gallery={existingGallery}/>
+            </Route> */}
         </div>
     )
 // }
