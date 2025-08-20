@@ -17,9 +17,10 @@ console.log(existingGallery);
             <h2>{existingGallery.name}</h2>
                 {/* <ArtImageTile art={picArray} gallery={existingGallery}/> */}
             <Route exact to={`/galleries/${galleryId}`}>
+
             {existingGallery.objects.map(object=>{
                  return (
-                     <ArtImageTile art={[object.images[0]]} gallery={existingGallery}/>
+                     <ArtImageTile key={object.id} art={[object.images[0]]} gallery={existingGallery}/>
                 )
              })}
  {/* <ArtImageTile art={picArray} gallery={existingGallery}/> */}
