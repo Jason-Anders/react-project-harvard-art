@@ -24,7 +24,7 @@ const ArtDescription = ({gallery}) => {
         <h2>Images</h2>
         {existingArt.images.map(image=>{
             return (
-                <img src={image.baseimageurl} alt="" key={existingArt.id}></img>
+                <img src={image.baseimageurl} alt="" key={image.imageid}></img>
             )
         })}
         {/* images descript credit and technique */}
