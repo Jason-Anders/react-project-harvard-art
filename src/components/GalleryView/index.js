@@ -6,8 +6,7 @@ const GalleryView = ({galleries}) => {
 
 const { galleryId } = useParams();
 const existingGallery = galleries.find(gallery=>gallery.id===parseInt(galleryId))
-// console.log(existingGallery);
-// console.log(artId)
+
 // const picArray = existingGallery.objects.map((object)=>{
 //     return object.images[0]
 // });
