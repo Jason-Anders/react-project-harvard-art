@@ -39,8 +39,8 @@ nav ul li a {
 .fullImage {
     width:auto;
     height:auto;
-     /* max-width: 100vw;
-     max-height: 100vh; */
+     max-width: 80vw;
+     max-height: auto;
 }
 
 .active {
@@ -48,11 +48,27 @@ nav ul li a {
 }
 
 body {
-    font-family:Arial, Helvetica, sans-serif
+    font-family:Arial, Helvetica, sans-serif;
+    /* background:url('./data/grunge-paper-background.jpg'); */
+
+/* background-image: linear-gradient(to bottom right, #ddc18d, #d4af90, #ddc18d); */
+        /* background-color: #ede7d6; Base color */
+        background-image: radial-gradient(ellipse, beige 0%, tan 90%, brown 100%);
+min-height: 100vh;
+
+
 }
 
 p {
     margin: 0 10%;
 
-    line-height: 22px;
+    line-height: 24px;
 }
+
+.marble-background {
+        background-image:
+            linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.1) 100%),
+            radial-gradient(ellipse at center, rgba(100, 100, 100, 0.2) 0%, transparent 70%),
+            linear-gradient(-45deg, rgba(200, 200, 200, 0.15) 0%, transparent 60%);
+        background-color: #eee; /* Base color */
+    }
