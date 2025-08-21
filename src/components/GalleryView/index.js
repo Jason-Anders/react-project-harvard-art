@@ -13,7 +13,7 @@ const existingGallery = galleries.find(gallery=>gallery.id===parseInt(galleryId)
 
     return (
         <div className="wrapper">
-            <h1>Hello from GalleryView</h1>
+            {/* <h1>Hello from GalleryView</h1> */}
             <h2>{existingGallery.name}</h2>
                 {/* <ArtImageTile art={picArray} gallery={existingGallery}/> */}
             <Route exact path={`/galleries/${galleryId}`}>

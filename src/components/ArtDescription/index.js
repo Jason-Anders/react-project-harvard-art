@@ -11,23 +11,28 @@ const ArtDescription = ({gallery}) => {
         <div className="wrapper">
         <h1>{existingArt.title}</h1>
         <p>{existingArt.description}</p>
-<h3>Credited By:</h3>
-<p>{existingArt.creditline}</p>
-<h3>Technique</h3>
-<p>{existingArt.technique}</p>
 
-        <Link to={`/galleries/${gallery.id}`}>
-        Back to Gallery: {gallery.name}
-        </Link>
-        <a href={existingArt.url}>{existingArt.title}</a>
 
         <h2>Images</h2>
         {existingArt.images.map(image=>{
             return (
-                <img src={image.baseimageurl} alt="" key={image.imageid}></img>
+                <img src={image.baseimageurl} alt="" key={image.imageid} className="fullImage"></img>
             )
         })}
         {/* images descript credit and technique */}
+        <h3>Credited By:</h3>
+<p>{existingArt.creditline}</p>
+<h3>Technique</h3>
+<p>{existingArt.technique}</p>
+
+ <p>
+        <Link to={`/galleries/${gallery.id}`}>
+        Back to Gallery: {gallery.name}
+        </Link>
+       </p>
+       <p>
+        <a href={existingArt.url}>More Details at HardvardArtMuseums.org</a>
+</p>
 
 </div>
     )
